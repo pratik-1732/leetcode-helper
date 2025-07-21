@@ -1,3 +1,23 @@
+let cachedContent = "";
+
+chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
+  if (msg.action === "getProblem") {
+    if (cachedContent) {
+      console.log("📩 Sending cached content");
+      sendResponse(cachedContent);
+    } else {
+      const currentContent = extractProblemContent();
+      if (currentContent) {
+        cachedContent = currentContent;
+        sendResponse(cachedContent);
+      } else {
+        sendResponse("Problem content is still loading...");
+      }
+    }
+  }
+  return true;
+});
+
 // extracting problem statement
 function extractProblemContent() {
   const title =
