@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+.output-container:empty::before {
+  content: "Output will appear here...";
+  color: #a0aec0; /* slate-400 */
+  font-style: italic;
+  font-family: "Inter", sans-serif;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  pointer-events: none;
+}
