@@ -4,10 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
-    <title>LitCode Helper</title>
+    <title>LeetCode Helper</title>
   </head>
-  <body class="bg-gray-100 p-6">
-    <h1 class="text-7xl text-red-600 font-bold mb-4">Hello guys...</h1>
-    <button class="bg-blue-600 text-white px-4 py-2 rounded">Try Me</button>
+  <body
+    class="flex items-center justify-center px-10 py-2 m-0 min-h-[600px] w-[550px] bg-gradient-to-tr from-indigo-400 to-purple-600 font-sans"
+  >
+    <div>
+      <div>
+        <h2
+          class="text-4xl text-center text-[#2d3748] font-bold mb-2 bg-gradient-to-tr from-indigo-400 to-purple-600 bg-clip-text"
+        >
+          🚀 LeetCode AI Assistant
+        </h2>
+        <div class="text-center mb-4 text-lg text-[#46484c]">
+          Your intelligent coding companion
+        </div>
+      </div>
+
+      <!-- get steps  -->
+      <div class="flex flex-col gap-4">
+        <div class="flex gap-3 flex-wrap">
+          <button id="getSteps">🧠 Get Steps</button>
+        </div>
+        <div
+          id="stepsOutput"
+          class="bg-[#f8fafc] border-2 mb-5 border-[#e2e8f0] rounded-xl p-5 min-h-[150px] whitespace-pre-wrap text-[#2d3748] relative overflow-auto leading-relaxed transition-all duration-300 ease-in-out font-mono text-sm"
+        ></div>
+      </div>
+
+      <!-- lang options  -->
+      <div class="flex flex-col gap-4">
+        <div class="font-semibold text-lg text-[#2d3748] mb-2">
+          Programming Language
+        </div>
+        <select
+          id="languageSelect"
+          class="py-2 px-5 border-2 border-white rounded-xl outline-none hover:cursor-pointer transition-all duration-200 bg-transparent"
+        >
+          <option value="Python" class="bg-transparent">🐍 Python</option>
+          <option value="JavaScript">🟨 JavaScript</option>
+          <option value="C++">⚡ C++</option>
+          <option value="Java">☕ Java</option>
+        </select>
+      </div>
+    </div>
   </body>
 </html>
